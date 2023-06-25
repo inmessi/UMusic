@@ -4,6 +4,7 @@ li = [
     'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'
 ]
 
+notes = []
 inp = input()
 root = 0
 for i in range(len(li)): 
@@ -12,26 +13,27 @@ for i in range(len(li)):
         break
 
 i = root
-print (li[i], end = ' ')
+notes += [li[i]]
 for j in range(0, 2):
     i = i + 2
     if i >= len(li):
         i -= len(li)
-    print (li[i], end = ' ')
-    
+    notes += [li[i]]
 i = i + 1
 if i >= len(li):
     i -= len(li)
-print (li[i], end = ' ')
-
+notes += [li[i]]
+    
 for j in range(0, 3):
     i = i + 2
     if i >= len(li):
         i -= len(li)
-    print (li[i], end = ' ')
+    notes += [li[i]]
 i = i + 1
 if i >= len(li):
     i -= len(li)
-print (li[i], end = ' ')
+notes += [li[i]]
+
+print (notes)
 
 
